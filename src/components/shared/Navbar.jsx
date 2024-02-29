@@ -8,7 +8,7 @@ import Categories from "./Categories";
 
 const Navbar = () => {
   return (
-    <>
+    <div className="sticky top-0 left-0 w-full z-20">
       <div className="flex items-center justify-center py-4 bg-[#0078AD] text-white">
         <div className="w-[90%] sm:w-[80%] flex items-center justify-between">
           <div className="flex items-center gap-x-2 md:gap-x-8">
@@ -38,7 +38,7 @@ const Navbar = () => {
         </div>
       </div>
       <Categories />
-    </>
+    </div>
   );
 };
 

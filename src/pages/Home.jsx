@@ -10,6 +10,7 @@ import FruitsSlider from "../components/home/FruitsSlider";
 import CategorySlider from "../components/home/CategorySlider";
 import ProdcutCard from "../components/shared/ProdcutCard";
 import ProductsSlider from "../components/ProductsSlider";
+import Footer from "../components/shared/Footer";
 
 const Home = () => {
   return (

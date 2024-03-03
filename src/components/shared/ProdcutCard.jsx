@@ -1,23 +1,19 @@
-const ProdcutCard = () => {
+const ProdcutCard = ({ product }) => {
   return (
     <div className=" border p-2 shadow-sm mt-4">
-      <div className="w-full h-[180px]">
+      <div className="w-full h-[180px] flex items-center justify-center">
         <img
-          className="rounded-md h-full w-full object-cover"
+          className="rounded-md max-h-full max-h-full"
           loading="lazy"
-          src="https://www.jiomart.com//images/product/original/491934236/clinic-plus-strong-long-health-shampoo-1-l-product-images-o491934236-p590317996-0-202203151906.jpg?im=Resize=(150,150)"
+          src={product.image}
           alt=""
         />
       </div>
       <div className="px-3 flex flex-col gap-y-1 text-[14px] mt-1">
-        <p className="text-xs">Lorem ipsum dolor, sit amet consectetur</p>
-        <p>782.00</p>
-        <div>
-          <span>RS 772.00</span>
-          <span className="text-green-500">50% OFF</span>
-        </div>
-        <div className="flex items-center justify-between rounded-full border px-2 border-gray-400 cursor-pointer">
-          <p>add</p>
+        <p className="text-xs">{product.title}</p>
+        <p>{product.price}.00</p>
+        <div className="flex items-center justify-between rounded-full font-extrabold text-green-700 border px-3 py-1 border-gray-400 cursor-pointer">
+          <p>Add</p>
           <span>+</span>
         </div>
       </div>

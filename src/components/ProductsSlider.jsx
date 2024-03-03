@@ -5,8 +5,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import ProdcutCard from "./shared/ProdcutCard";
 
-const products = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9];
-const ProductsSlider = ({ children }) => {
+const ProductsSlider = ({ products = [] }) => {
   return (
     <Swiper
       slidesPerView={1}
@@ -31,7 +30,7 @@ const ProductsSlider = ({ children }) => {
     >
       {products.map((i, idx) => (
         <SwiperSlide key={idx}>
-          <ProdcutCard />
+          <ProdcutCard product={i} />
         </SwiperSlide>
       ))}
     </Swiper>

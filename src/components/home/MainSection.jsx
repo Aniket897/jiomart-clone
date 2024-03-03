@@ -8,6 +8,9 @@ import TopCategories from "./TopCategories";
 import FruitsSlider from "./FruitsSlider";
 import CategorySlider from "./CategorySlider";
 import ProductsSlider from "../ProductsSlider";
+import TopDeals from "./TopDeals";
+import TopSeller from "./TopSeller";
+import TopElectronics from "./TopElectronics";
 
 const MainSection = () => {
   return (
@@ -46,26 +49,24 @@ const MainSection = () => {
       </Section>
       <FruitsSlider />
       <CategorySlider />
-      <Section title={"Top deals in Grocery"}>
-        <div className="w-[95%] mx-auto">
-          <ProductsSlider />
-        </div>
-      </Section>
+      <TopDeals />
       <Banner
         image={
           "https://www.jiomart.com/images/cms/aw_rbslider/slides/1707988225_Global_Store_Desktop.jpg?im=Resize=(1240,150)"
         }
       />
-      <Section title={"Top deals in Grocery"}>
-        <div className="w-[95%] mx-auto">
-          <ProductsSlider />
-        </div>
-      </Section>
-      <Section title={"Top deals in Grocery"}>
-        <div className="w-[95%] mx-auto">
-          <ProductsSlider />
-        </div>
-      </Section>
+      <TopSeller />
+      <TopElectronics />
+      <Banner
+        image={
+          "https://www.jiomart.com/images/cms/aw_rbslider/slides/1708754252_D1.jpg?im=Resize=(1240,150)"
+        }
+      />
+      <Banner
+        image={
+          "https://www.jiomart.com/images/cms/aw_rbslider/slides/1675955392_Jio_Cares_1240x194.jpg?im=Resize=(1240,150)"
+        }
+      />
     </>
   );
 };

@@ -35,7 +35,9 @@ const Navbar = () => {
               <IoIosList size={25} />
             </div>
             <div className="flex items-center gap-x-3">
-              <IconButton icon={<CiSearch size={20} />} />
+              <div className="md:hidden">
+                <IconButton icon={<CiSearch size={20} />} />
+              </div>
               <Link to={"/cart"} className="relative">
                 <span className="w-4 h-4 flex items-center justify-center rounded-full bg-red-500 text-white text-xs absolute right-0">
                   {cart.items.length}

@@ -1,14 +1,18 @@
 export const categories = [
-  "Groceries",
-  "Premium Fruits",
-  "Home & Kictchen",
-  "Fashion",
-  "Electronics",
-  "Beauty",
-  "Jewellery",
-  "Home Improvement",
-  "Sports",
-  "Toy & Luggage",
+  "electronics",
+  "jewelery",
+  "men's clothing",
+  "women's clothing",
+  //   "Groceries",
+  //   "Premium Fruits",
+  //   "Home & Kictchen",
+  //   "Fashion",
+  //   "Electronics",
+  //   "Beauty",
+  //   "Jewellery",
+  //   "Home Improvement",
+  //   "Sports",
+  //   "Toy & Luggage",
 ];
 
 export const mainSliderImages = [

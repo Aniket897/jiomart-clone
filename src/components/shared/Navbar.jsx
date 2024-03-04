@@ -5,15 +5,20 @@ import { FaCartShopping } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
 import IconButton from "../ui/IconButton";
 import Categories from "./Categories";
+import { Link } from "react-router-dom";
+import { useCart } from "../../contexts/cartContext";
 
 const Navbar = () => {
+  const cart = useCart();
   return (
     <div className="sticky top-0 left-0 w-full z-20">
       <div className="flex items-center justify-center py-4 bg-[#0078AD] text-white">
         <div className="w-[90%] sm:w-[80%] flex items-center justify-between">
           <div className="flex items-center gap-x-2 md:gap-x-8">
             <IconButton icon={<BsList size={25} />} />
-            <p className="sm:text-3xl font-extrabold">JioMart</p>
+            <Link to={"/"} className="sm:text-3xl font-extrabold">
+              JioMart
+            </Link>
             <div className=" max-lg:hidden text-xs hover:bg-[#0C5273] rounded-lg p-2 px-4 cursor-pointer duration-500">
               <p>Deliver to Mumbai 400001</p>
             </div>
@@ -31,7 +36,12 @@ const Navbar = () => {
             </div>
             <div className="flex items-center gap-x-3">
               <IconButton icon={<CiSearch size={20} />} />
-              <IconButton icon={<FaCartShopping size={20} />} />
+              <Link to={"/cart"} className="relative">
+                <span className="w-4 h-4 flex items-center justify-center rounded-full bg-red-500 text-white text-xs absolute right-0">
+                  {cart.items.length}
+                </span>
+                <IconButton icon={<FaCartShopping size={20} />} />
+              </Link>
               <IconButton icon={<FaUser size={20} />} />
             </div>
           </div>

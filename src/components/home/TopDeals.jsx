@@ -3,9 +3,10 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Section from "../Section";
 import ProductsSlider from "../ProductsSlider";
+import Loader from "../shared/Loader";
 
 const TopDeals = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [products, setProducts] = useState([]);
 
@@ -30,7 +31,11 @@ const TopDeals = () => {
   };
 
   if (loading) {
-    return <p>Loading.....</p>;
+    return (
+      <div className="h-[400px]">
+        <Loader />
+      </div>
+    );
   }
 
   if (error) {

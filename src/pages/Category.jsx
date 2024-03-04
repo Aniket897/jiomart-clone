@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProdcutCard from "../components/shared/ProdcutCard";
+import Loader from "../components/shared/Loader";
+import Error from "../components/shared/Error";
 
 const Category = () => {
   const params = useParams();
@@ -30,11 +32,19 @@ const Category = () => {
   };
 
   if (loading) {
-    return <p>Loading.....</p>;
+    return (
+      <div className="h-[70vh]">
+        <Loader />
+      </div>
+    );
   }
 
   if (error) {
-    return <p>Error....</p>;
+    return (
+      <div className="h-[70vh]">
+        <Error />
+      </div>
+    );
   }
 
   return (

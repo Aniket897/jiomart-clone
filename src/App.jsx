@@ -5,6 +5,7 @@ import Footer from "./components/shared/Footer";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 import Category from "./pages/Category";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (

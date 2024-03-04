@@ -44,7 +44,9 @@ const Navbar = () => {
                 </span>
                 <IconButton icon={<FaCartShopping size={20} />} />
               </Link>
-              <IconButton icon={<FaUser size={20} />} />
+              <Link to={"/login"}>
+                <IconButton icon={<FaUser size={20} />} />
+              </Link>
             </div>
           </div>
         </div>
